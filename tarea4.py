@@ -24,6 +24,8 @@ class Host:
         return '%s,%s,%s,%s,%s\n' % (self.ip, self.status, self.ssh, self.honeypot, self.nombre_dominio)
 
 def printError(msg, exit = False):
+    """Función que imprime mensaje de error y sale del programa
+    Recibe: mensage a mostrar y booleano que indica si se debe terminar la ejecución del programa"""
     sys.stderr.write('Error:\t%s\n' % msg)
     if exit:
         sys.exit(1)
