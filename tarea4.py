@@ -23,6 +23,11 @@ class Host:
         """Método para convertir el objeto en una cadena con el formato que indiquemos"""
         return '%s,%s,%s,%s,%s\n' % (self.ip, self.status, self.ssh, self.honeypot, self.nombre_dominio)
 
+def printError(msg, exit = False):
+    sys.stderr.write('Error:\t%s\n' % msg)
+    if exit:
+        sys.exit(1)
+
 def lee_xml(archivo_xml):
     """Función para leer el archivo xml. Se buscará la información solicitada para realizar el reporte, es decir, puertos abiertos, direcciones ips,
     estado del host (prendido o apagado), servidores HTTP utilizados, nombres de dominio, honeypots. Recibe el archivo xml que se analizará"""
