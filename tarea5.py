@@ -10,7 +10,7 @@ from requests.exceptions import ConnectionError
 
 def printError(msg, exit = False):
     """Función que imprime mensaje de error y sale del programa
-        Recibe: mensage a mostrar y booleano que indica si se debe terminar la ejecución del programa"""
+        Recibe: mensaje a mostrar y booleano que indica si se debe terminar la ejecución del programa"""
     sys.stderr.write('Error:\t%s\n' % msg)
     if exit:
         sys.exit(1)
